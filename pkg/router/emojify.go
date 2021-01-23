@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/go-chi/chi"
-	"hamologist.com/emojify/pkg/model"
-	"hamologist.com/emojify/pkg/transformer"
+	"github.com/hamologist/emojify/pkg/model"
+	"github.com/hamologist/emojify/pkg/transformer"
 	"net/http"
 )
 

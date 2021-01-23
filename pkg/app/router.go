@@ -3,7 +3,7 @@ package app
 import (
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
-	"hamologist.com/emojify/pkg/router"
+	"github.com/hamologist/emojify/pkg/router"
 )
 
 func NewRouter() *chi.Mux {

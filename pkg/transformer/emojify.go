@@ -2,7 +2,7 @@ package transformer
 
 import (
 	"github.com/enescakir/emoji"
-	"hamologist.com/emojify/pkg/model"
+	"github.com/hamologist/emojify/pkg/model"
 	"math/rand"
 	"strings"
 	"time"

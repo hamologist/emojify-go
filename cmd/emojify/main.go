@@ -1,7 +1,7 @@
 package main
 
 import (
-	"hamologist.com/emojify/pkg/app"
+	"github.com/hamologist/emojify/pkg/app"
 	"net/http"
 )
 
