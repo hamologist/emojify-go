@@ -18,7 +18,16 @@ func EmojifyTransformer(payload model.EmojifyPayload) (model.EmojifyResponse, er
 	separated := strings.Split(message, " ")
 
 	for i, word := range separated {
-		word = word + emojis[r.Intn(len(emojis))]
+		checkOne := r.Intn(2)
+		checkTwo := r.Intn(3)
+
+		if checkTwo == 1 {
+			for emojiCount := r.Intn(4); emojiCount > 0; emojiCount-- {
+				word = word + emojis[r.Intn(len(emojis))]
+			}
+		} else if checkOne == 1 {
+			word = word + emojis[r.Intn(len(emojis))]
+		}
 		separated[i] = word
 	}
 
@@ -34,7 +43,7 @@ func init() {
 	emojis = make([]string, len(emojiMap))
 	for _, val := range emojiMap {
 		emojis[i] = val
-		i += 1
+		i++
 	}
 
 	source := rand.NewSource(time.Now().Unix())
