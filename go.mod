@@ -1,4 +1,4 @@
-module hamologist.com/emojify
+module github.com/hamologist/emojify
 
 go 1.15
 
