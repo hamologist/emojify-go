@@ -15,7 +15,16 @@ func EmojifyRouter() *chi.Mux {
 		payload := model.EmojifyPayload{}
 		err := json.NewDecoder(request.Body).Decode(&payload)
 		if err != nil {
-			http.Error(writer, http.StatusText(500), 500)
+			writer.Header().Set("Content-Type", "application/json")
+			writer.WriteHeader(500)
+			writer.Write([]byte("{\"error\": \"Invalid payload\"}"))
+			return
+		}
+
+		if payload.Message == "" {
+			writer.Header().Set("Content-Type", "application/json")
+			writer.WriteHeader(500)
+			writer.Write([]byte("{\"error\": \"Payload contains an empty or missing message field\"}"))
 			return
 		}
 

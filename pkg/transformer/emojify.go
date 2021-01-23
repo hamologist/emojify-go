@@ -38,12 +38,22 @@ func EmojifyTransformer(payload model.EmojifyPayload) (model.EmojifyResponse, er
 
 func init() {
 	emojiMap := emoji.Map()
+	filter := make(map[string]bool)
 
-	i := 0
-	emojis = make([]string, len(emojiMap))
-	for _, val := range emojiMap {
-		emojis[i] = val
-		i++
+	for key, val := range emojiMap {
+		if !strings.Contains(key, ":flag") {
+			emojis = append(emojis, val)
+		} else {
+			filter[val] = true
+		}
+	}
+
+	for i, val := range emojis {
+		if filter[val] == true {
+			emojis[i] = emojis[len(emojis)-1]
+			emojis[len(emojis)-1] = ""
+			emojis = emojis[:len(emojis)-1]
+		}
 	}
 
 	source := rand.NewSource(time.Now().Unix())
