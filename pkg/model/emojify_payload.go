@@ -1,5 +1,5 @@
 package model
 
 type EmojifyPayload struct {
-	Message string
+	Message string `json:"message"`
 }
