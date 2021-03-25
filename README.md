@@ -9,7 +9,7 @@ $ go get github.com/hamologist/emojify
 
 ## Usage
 Once emojify has been installed, you can start feeding it payloads for emojification.
-Below is a basic example of how a string is fed into the `EmojifyTransformer` for transformation.:
+Below is a basic example of how a string is fed into the `EmojifyTransformer` for transformation:
 ```go
 package main
 
