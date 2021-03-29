@@ -89,3 +89,11 @@ Just input all of the text you would like to see emojified and send an end termi
 ```
 $ emojify help
 ```
+
+## Related
+* [Emojify Sam](https://github.com/hamologist/emojify-sam)
+	* AWS SAM project capable of creating lambda and API gateway resources for hosting an Emojify service.
+	* Also supports deploying resources for processing Discord slash command requests.
+	* Public web API is also provided [here!](https://github.com/hamologist/emojify-sam#public-resource)
+* [Meme Machine](https://github.com/hamologist/meme-machine)
+    * Python discord bot that supports emojifying messages via `!emojify` [command](https://github.com/hamologist/meme-machine/blob/master/meme_machine/emojify.py)
