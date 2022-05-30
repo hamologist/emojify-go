@@ -4,7 +4,7 @@
 ## Installation
 To install and start using emojify:
 ```bash
-$ go get github.com/hamologist/emojify
+$ go get github.com/hamologist/emojify-go
 ```
 
 ## Usage
@@ -48,10 +48,10 @@ Please feel free to use them as inspiration for your own works.
 You can install them using the following:
 ```bash
 # Installs the command line emojifier
-$ go install github.com/hamologist/emojify/cmd/emojify
+$ go install github.com/hamologist/emojify-go/cmd/emojify
 
 # Installs the emojifying web server
-$ go install github.com/hamologist/emojify/cmd/emojify-server
+$ go install github.com/hamologist/emojify-go/cmd/emojify-server
 ```
 
 ## Emojifying Web Server

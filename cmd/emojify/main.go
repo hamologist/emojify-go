@@ -3,8 +3,8 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"github.com/hamologist/emojify/pkg/model"
-	"github.com/hamologist/emojify/pkg/transformer"
+	"github.com/hamologist/emojify-go/pkg/model"
+	"github.com/hamologist/emojify-go/pkg/transformer"
 	"github.com/urfave/cli/v2"
 	"io/ioutil"
 	"log"
@@ -16,7 +16,7 @@ func main() {
 	reader := bufio.NewReader(os.Stdin)
 	data, err := ioutil.ReadAll(reader)
 	app := &cli.App{
-		Name: "emojify",
+		Name:  "emojify",
 		Usage: "emojifies text read from stdio",
 		Action: func(c *cli.Context) error {
 			resp, err := transformer.EmojifyTransformer(

@@ -2,7 +2,7 @@ package transformer
 
 import (
 	"github.com/enescakir/emoji"
-	"github.com/hamologist/emojify/pkg/model"
+	"github.com/hamologist/emojify-go/pkg/model"
 	"math/rand"
 	"strings"
 	"time"
@@ -10,7 +10,7 @@ import (
 
 var (
 	emojis []string
-	r *rand.Rand
+	r      *rand.Rand
 )
 
 func EmojifyTransformer(payload model.EmojifyPayload) (model.EmojifyResponse, error) {
